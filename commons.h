@@ -1,7 +1,7 @@
 //
 // Created by anonymized on 12/7/21.
 //
-#pragma once;
+#pragma once
 #ifndef ZKUNSAT_NEW_COMMONS_H
 #define ZKUNSAT_NEW_COMMONS_H
 #include "emp-zk/emp-zk.h"

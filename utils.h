@@ -361,4 +361,24 @@ inline void readproof(string filename, int& d, vector<CLS>& clauses, vector<SPT>
     }
 }
 
+/*
+ * Parse command line arguments for party and port
+ * Usage: program <party> <port> [args...]
+ * where party is 1 for ALICE or 2 for BOB
+ */
+inline void parse_party_and_port(char** argv, int* party, int* port) {
+    if (argv[1] == NULL || argv[2] == NULL) {
+        error("Usage: program <party> <port> [args...]\n");
+    }
+    *party = atoi(argv[1]);  // 1 for ALICE, 2 for BOB
+    *port = atoi(argv[2]);   // port number
+    
+    if (*party != ALICE && *party != BOB) {
+        error("Party must be 1 (ALICE) or 2 (BOB)\n");
+    }
+    if (*port < 1024 || *port > 65535) {
+        error("Port must be between 1024 and 65535\n");
+    }
+}
+
 #endif //ZKUNSAT_NEW_UTILS_H
