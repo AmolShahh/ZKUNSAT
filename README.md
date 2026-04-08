@@ -43,22 +43,10 @@ sudo apt-get install libntl-dev
 # or from source: https://libntl.org/
 ```
 
-2. Install emp-tool:
+2. Install emp-tool, emp-zk
 ```bash
-git clone https://github.com/emp-toolkit/emp-tool.git
-cd emp-tool
-cmake .
-make
-sudo make install
-```
-
-3. Install emp-zk:
-```bash
-git clone https://github.com/emp-toolkit/emp-zk.git
-cd emp-zk
-cmake .
-make
-sudo make install
+wget https://raw.githubusercontent.com/emp-toolkit/emp-readme/master/scripts/install.py
+python3 install.py --deps --tool --ot --zk
 ```
 
 ### Building the Project
